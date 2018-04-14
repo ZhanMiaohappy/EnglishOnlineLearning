@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品橱窗</title>
+		<style type="text/css">
+			#chuchuang{
+				height: 150px;
+				width: 500px;
+				border: 1px solid black;
+				border-radius: 10px;
+				overflow-x: auto;
+			    overflow-y: auto;	/*滚动条*/
+			}
+			#chuchuang .current{
+				border:2px solid #e4393c;
+			}
+			#chuchuang p{
+				width:800px;
+			}
+			#chuchuang img{
+				width: 100px;
+				height: 90px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="chuchuang">
+		  <p>
+			<img src="img/HBuilder.png"/>
+			<img class="current" src="images/001.jpg"/>
+			<img src="images/002.jpg"/>
+			<img src="images/003.jpg"/>
+		    <img src="images/005.jpg"/>
+		  </p>
+		</div>
+	</body>
+</html>

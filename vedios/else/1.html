@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style type="text/css">
+			h1{
+				color:red /*!important*/;
+			}
+			p{
+				background-color: yellow;
+			}
+			.classA{
+				color: blue;
+			}
+			p.classA{
+				font-size: 60px;
+			}
+		</style>
+	<!--	<link rel="stylesheet" type="text/css" href="1-1.css" />-->
+		<meta charset="UTF-8"/>
+		<meta name="keywords" content="英语学习,在线学习"/>
+		<meta name="description" content="这是一个神奇的网站"/>
+		<title>英语在线学习系统</title>
+		<!--<meta http-equiv="refresh" content="3;url=http://www.baidu.com" /><!--3秒自动跳转-->-->
+	</head>
+	<body>
+		<h1 >这里是标题哦</h1>
+		<p align="center" class="classA">这里是<span>锻炼</span>段落</p>
+		<h1 class="classA">这里是标题2</h1>
+		<p align="center" >这里是段落2</p>
+	</body>
+</html>
+
+
+
+
+<script language="javascript">
+//控制图片顺序播放的程序
+var picArr=new Array("1.jpg","2.jpg","3.jpg","4.jpg","5.jpg");
+var index=0;
+function next(){
+    index++;
+    if(index==picArr.length){
+        index=0;
+        }
+    document.getElementById("imgp").src=picArr[index];
+    }
+function previous(){
+    index--;
+    if(index<0){
+     index=picArr.length-1;
+     }
+    document.getElementById("imgp").src=picArr[index];
+    }
+//控制MENU按钮打开下拉菜单的程序 
+function test()     
+    {     
+        var order = document.getElementById("order");  
+
+
+        if (order.style.display=="none")     
+        {     
+
+            order.style.display="block";   
+
+        } 
+        else {order.style.display="none"; } 
+
+
+        var orderUser = document.getElementById("orderUser");  
+        orderUser.style.display="block";
+    }      
+</script>
+
+<!--加入css-->
+<style type="text/css">              
+    #div1 {width:473px;height:257px;border:0px;}
+    #imgp {width:473px;height:257px;}
+     /*对body设置为相对布局*/
+    body{position: relative;}  
+
+   :focus {
+    outline: 0;  /*点击按钮的时候就不会有蓝色边框*/
+   }
+
+    #order {position: absolute;top: 80px;right: 10px;}
+    #orderUser {position: absolute;top: 20px;right: 30px;}
+    #div1 {position: absolute;top: 377px;left: 426px;}
+    #div2 {position: absolute;top: 440px;left: 290px;}
+    #div3 {position: absolute;top: 440px;left: 920px;}
+    #div4 {position: absolute;top: 599px;right: 10px;}
+    #div5 {position: absolute;top: 50px;right: 126px;}
+</style>
+
+<body background="beijing.jpg">
+<input id="orderUser" type="image" src="44.jpg" onclick="test();">  
+<div id="order" action="/order.action" style="display:none" >
+    <ul style="list-style-type:none" class="dropdown-menu">
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">ALBUM</a></li>
+        <li><a href="#">MESSAGE</a></li>
+    </ul>      
+  </div>
+
+<div id="div1">
+    <img src="imageBox/夜空01.jpg" id="imgp" />
+    </br>
+  </div>
+
+<div id="div2">
+    <input type="image" src="imageBox/btn1.png" onclick="next()" />
+  </div>
+
+<div id="div3">
+    <input type="image" src="imageBox/btn2.png" onclick="previous()" />
+  </div>
+  <div id="div4">
+    <input type="image" src="imageBox/夜空01.jpg"/>
+    <input type="image" src="imageBox/外教01.jpg"/>
+    <input type="image" src="imageBox/外教04.jpg"/>
+    <input type="image" src="imageBox/外教05.jpg"/>
+    <input type="image" src="imageBox/外教06.jpg"/>
+  </div>
+
+</body>
+
+
+
+
+
+		.jfocus{
+			width: 300px;
+			height: 300px;
+			border: #CCCCCC 1px solid;
+			background-color: #FFF;
+		}
+		#jfocuspic{
+			filter: progid:DXImageTransform.Microsoft.Fade(duration=0.5,overlap=1.0);
+			width: 300px;
+			height: 200px;
+			overflow: hidden;
+		}
+		#jfocuspic a{
+			display: none;
+			font-size: 2em;
+			text-align: center;
+			line-height: 200px;
+			font-weight: bold;
+			background-color: #CCC;
+			height: 200px;
+		}
+		#jfocusnum li{
+			cursor: pointer;
+			height: 50px;
+			width: 50px;
+			line-height: 50px;
+			display: inline-block;
+			color: #000000;
+			border:#999 1px solid;
+			text-align: center;
+			background-color: #CCCCCC;
+			float: left;
+			margin: 0 5px;
+		}
+		#jfocusnum li.on{
+			color: #F00;
+			font-weight: bold;
+			border: #900 1px solid;
+			font-size: 14px;
+		}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p></p><p></p><p></p>
+<h4>自然拼读法</h4>
+                                            <p>掌握发音技巧、单词规律，打好英语学习基础</p>
+                                             <h4>绘本讲堂课</h4>
+                                            <p>趣味教材，提升学习兴趣，扩充知识面，拓展视野</p>
+                                            <h4>火箭进阶课</h4>
+                                            <p>快速提升口语能力，有效增加学习信息</p>
+                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--S= 自助购买-->
+                <div class="self-help-buy">
+                        <div class="container">
+                        	<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <h2 class="title" align="center">一键下单 自助购买</h2>
+                            <h4 class="subtitle" align="center">
+                                 <span>三种类型，按需购买，自由组合性价比高</span>
+                            </h4>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                        <div class="product-item1">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy02.jpg"">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">通用系统班</h4>
+                                                    <h4>
+                                                        <span class="price">¥699</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6256</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div>单词书+真题详解+全套讲义外教大神推荐</div>
+                                            <div>青叶老师亲编详细解析带你365天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                            <button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                        <div class="product-item2">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy06.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">通用季度班</h4>
+                                                    <h4>
+                                                        <span class="price">¥399</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6256</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div>单词书+真题详解+全套讲义，外教大神推荐</div>
+                                            <div>青叶老师亲编详细解析带你90天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                        	<button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                        <div class="product-item3">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy08.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">通用暑期班</h4>
+                                                    <h4>
+                                                        <span class="price">¥199</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6256</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div>单词书+真题详解+全套讲义，外教大神推荐</div>
+                                            <div>青叶老师亲编详细解析带你30天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                        	<button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <h2 class="title" align="center">一起学英语，一起找funny！</h2>
+                            <h4 class="subtitle" align="center">
+                                 <span>喜欢就买吧！</span>
+                            </h4>
+          	            </div>
+          	    </div>
+          	    
+
+
+   .product-item1{
+   	background-color: white;
+   	height: 260px;
+   	border-radius: 20px;
+   	width: 360px;
+   	float: left;
+   	margin-left:105px;
+   }
+   .product-item2,.product-item3{
+   	background-color: white;
+   	height: 260px;
+   	width: 360px;
+   	border-radius: 20px;
+   	float: left;
+   	margin-left:32px;
+   }
+   .media{
+   	width: 100%;
+   	height: 53%;
+   }
+   .media-left{
+   	float: left;
+   }
+   .media-body{
+   	float:left;
+   	margin-left: 30px;
+   }
+   .media-objec{
+   	margin-left: 10px;
+   	margin-top: 14px;
+   	border-radius: 10px;
+   }
+   .col-xs-4 .btn{
+    float: right;
+   	position: relative;
+   	border-radius: 10px;
+    background-color:whitesmoke;
+    border: none;
+    color: black;
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+   }
+   .col-xs-4 .btn:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+   }
+    .col-xs-4 .btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+   }

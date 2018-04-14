@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<htmlDOCTYPE>
+  <head>
+	  <meta charset="UTF-8">
+	  <title>青叶线上英语</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	  <style type="text/css">
+		/**{
+			font-family: "微软雅黑"
+			margin: 0px;
+			padding: 0px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}*/
+		.top{
+			height: 40px;
+			background-color: #A9A9A9;
+		}
+		.nav{
+			height: 70px;
+			background-color: #444444;
+		}
+		.btn-sign {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: 1px solid orangered;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-sign span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    .btn-sign span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .btn-sign:hover span {
+      padding-right: 25px;
+    }
+    .btn-sign:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .btn-log {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: white;
+      border: 1px solid darkgrey;
+      color: black;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-log span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    .btn-log span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .btn-log:hover span {
+      padding-right: 25px;
+    }
+    .btn-log:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+		ul{
+			text-align: center;
+			color: white;
+			margin: 0px;
+		}
+		li{ 
+			font-size: 15px;
+			list-style: none;
+			float: left;
+			margin-left: 1px;
+			margin-right: 1px;
+			line-height: 70px;
+			text-align: center;
+			width: 120px;
+		}
+		li:hover{
+			cursor: pointer;
+			text-decoration: underline;
+			background-color: rgba(200,200,200,0.3);
+			border-radius: 0px;
+		}
+		.nav-li a:link{
+			color: white;
+		}
+		.nav-li a:visited{
+			color: white;
+		}
+		#li-img{
+			background: url('imageBox/绿叶.png') no-repeat left center;
+			background-size: 40%;
+			padding-left: 40px;
+			font-size: 37px;
+			font-weight: bold;
+		}	
+		#li-img:hover{
+			cursor: default;
+			text-decoration: n;
+			background-color: #444444;
+			border-radius: 0px;
+			text-decoration: none;
+		}
+		.nav-li{
+			margin: 0 auto;
+			width: 1366px;
+		}
+		.main{
+			width:100%;
+			margin: 0 auto;
+			background-color: white;
+		}
+    </style>
+  	<style type="text/css">
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background:#E4E4E4;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -ms-flex-align: center;
+      align-items: center;
+    }
+    .learning-time {
+      padding-top: 75px;
+    }
+    .learning-time .time-trend {
+      padding-top: 35px;
+      padding-bottom: 35px;
+      padding-left: 50px;
+      padding-right: 50px;
+      color: #fff;
+      text-align: center;
+      background-color: #00a080;
+      position: relative;
+      z-index: 99;
+    }
+    .learning-time .time-trend h4 {
+      color: #f3f3f3;
+      margin-bottom: -20px;
+    }  
+    .learning-time .time-trend .img-responsive {
+      display: inline-block;
+    }
+    .title{
+    	font-size: 40px;
+    	color: #1DAB8E;
+    }
+    .learning-crowd {
+      padding-top: 225px;
+      padding-bottom: 50px;
+      background-image: url("../img/learning_crowd_bg.jpg");
+      margin-top: -150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .learning-crowd .title1 {
+      max-width: 655px;
+      margin: 0 auto 30px auto;
+      color: #fff;
+      line-height: 30px;
+    }
+    .learning-crowd .title1 span {
+      color: #ffd300;
+    }
+    .learning-crowd .crowd-item {
+      margin-bottom: 35px;
+      line-height: 25px;
+      color: black;
+      text-align: center;
+      margin: 0 auto;
+      flex-direction: row;
+      float: left;
+    }
+    .learning-crowd .crowd-item h3 {
+      margin-bottom: 15px;
+      color: #00a080;
+    }  
+    .learning-crowd{
+    	background:#45413E;
+    }
+    .boxContain{
+    	margin: 0 auto;
+    	width: 100%;
+    	height: 150px;
+    	position: relative;
+    }
+    #box_1{
+    	float: left;
+    	position: relative;
+    	align-content: center;
+    	margin-left:250px;
+    }
+    #box_2,#box_3,#box_4{
+    	float: left;
+    	position: relative;
+    	align-content: center;
+    	margin-left: 150px;
+    }
+    #box_11{
+    	float: left;
+    	position: relative;
+    	align-content: center;
+    	margin-left:50px;
+    }
+    #box_22,#box_33,#box_44{
+    	float: left;
+    	position: relative;
+    	align-content: center;
+    	margin-left: 20px;
+    }
+    .course-system {
+      padding-bottom: 100px;
+    }
+    .course-system div.row, .course-system div.row>div {
+      padding: 0;
+      margin: 0;
+    }
+    .course-system a.course-item{
+      display: block;
+      height: 100px;
+      line-height: 100px;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+    }
+    .course-system .row1>div:nth-child(odd) .course-item{
+      background-color: rgba(217,80,114,0.85);
+    }
+    .course-system .row1>div:nth-child(even) .course-item{
+      background-color: rgba(217,80,114,0.65);
+    }
+    .course-system .row1>div a.course-item:hover{
+      background-color: rgba(217,80,114,1);
+    }
+    .course-system img.img-responsive {
+      display: inline-block;
+    }
+    .course-item{
+    	width: 160px;
+    	height: 80px;
+    }
+    .title2{
+    	color: #00A080;
+    	font-family: "STXiHei";
+    	font-size: 40px;
+    }
+    .subtitle{
+    	font-size: 20px;
+    }
+    </style>
+    <link rel="stylesheet" href="./swiper.css">
+  </head>
+  <body>
+	  <div class="main">
+		  <!--顶栏-->
+		  <div class="top">
+			  <div align="right">
+		        <button type="button" class="btn-sign" onclick="myClick()<!--location.href='http://baidu.com'-->" style="vertical-align:middle"><span>免费注册</span></button>
+		        <button type="button" class="btn-log" onclick="myClick()" style="vertical-align:middle"><span>马上登录</span></button>
+		    </div>
+	    </div>
+	    <!--导航栏-->
+		  <div class="nav">
+			  <div class="nav-li">
+				  <ul>
+					  <li id = 'li-img'>青叶</li>
+					  <li><a href="index.html">首页</a></li>					
+					  <li><a href="graduationEnglish.html">考研</a></li>
+					  <li><a>雅思</a></li>
+					  <li><a>托福</a></li>
+					  <li><a>四六级</a></li>
+				    <li><a href="teenagerEnglish.html">少年英语</a></li>
+					  <li><a href="generalEnglish.html">通用英语</a></li>
+					  <li><a>免费课程</a></li>
+					  <li><a>在线购买</a></li>
+				  </ul>
+			  </div>		
+		  </div>
+		  <!--正文部分-->
+		  <div class="main-content">
+        <!-- Swiper -->
+		    <div class="swiper-container">
+		      <div class="swiper-wrapper">
+		        <div class="swiper-slide" data-swiper-autoplay="2000"><img src="imageBox/夜空01.jpg""></div>
+		          <div class="swiper-slide"><img src="imageBox/外教01.jpg" alt=""></div>
+		          <div class="swiper-slide"><img src="imageBox/外教04.jpg" alt=""></div>
+		          <div class="swiper-slide"><img src="imageBox/外教05.jpg" alt=""></div>
+		          <div class="swiper-slide"><img src="imageBox/外教06.jpg" alt=""></div>
+		        </div>
+   		      <div class="swiper-pagination"></div>
+		        <div class="swiper-button-next"></div>
+		        <div class="swiper-button-prev"></div>
+		      </div>
+		    </div>
+		    <!--介绍-->
+        <div class="mainContent">
+        	  <!--主要人群-->
+   		      <div class="learning-time wow bounceInUp" data-wow-duration="2s">
+              <div class="container">
+                  <h2 class="title" align="center">真的没有时间学习英语吗?</h2>
+                  <div class="time-trend">
+                      <h4>2017年在线学习人群的学习时段数据分布</h4>
+                      <img class="img-responsive" src="imageBox/trend.png" alt="" />
+                  </div>
+              </div>
+              <div class="learning-crowd">
+                  <div class="container">
+                    <h4 class="title1">
+            	          <span>30%</span>的人群在<span>早8点前</span>和<span>晚22点后</span>进行在线学习，每天至少可多得<span>5小时</span>学习时间；
+            	                    线下培训班，往返路程平均浪费<span>1.5小时</span>，在线学习帮你节省时间用来享受生活。
+        	          </h4>
+                    <div class="text-center" align="center">
+                         <img src="imageBox/block-split.png" alt="" />
+                    </div>
+                    <div class="boxContain1" align="center">
+                      <div class="row wow bounceIn" data-wow-duration="2s" align="center">
+                        <div class="crowd-item col-md-3 col-sm-6 wow bounceInRight">
+                        	<div id="box_11">
+                            <img src="imageBox/zqz.png" alt="" />
+                            <h4>我是</h4>
+                            <h3>早起族</h3>
+                            <p style="font-size: 12px;">早7点别人还在睡觉，而我在跟英国外教网聊下午茶&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          </div>
+                        </div>
+                        <div class="crowd-item col-md-3 col-sm-6  wow bounceInRight" data-wow-delay="0.3s">
+                        	<div id="box_22">
+                            <img src="imageBox/ymz.png" alt="" />
+                            <h4>我是</h4>
+                            <h3>夜猫子</h3>
+                            <p style="font-size: 12px;">夜深人静时，我的注意力最专注，此时不学更待何时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          </div>
+                        </div>
+                        <div class="crowd-item col-md-3 col-sm-6  wow bounceInRight" data-wow-delay="0.5s">
+                        	<div id="box_33">
+                             <img src="imageBox/znzn.png" alt="" />
+                             <h4>我是</h4>
+                             <h3>宅男/女</h3>
+                             <p style="font-size: 12px;">不出门也可以跟老师嗨聊，全世界的新鲜事照样全知道&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          </div>
+                        </div>
+                        <div class="crowd-item col-md-3 col-sm-6  wow bounceInRight" data-wow-delay="0.7s">
+                        	<div id="box_44">
+                             <img src="imageBox/lhz.png" alt="" />
+                             <h4>我是</h4>
+                             <h3>乐活族</h3>
+                             <p style="font-size: 12px;">你还在去上课的路上，我已经躺在沙发上学完在看电影</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            <!--课程体系-->
+            <div class="course-system">
+                <div class="container">
+                  <div class="text-center wow zoomIn" align="center">
+                      <img class="img-responsive" src="imageBox/course_system.png" alt=""/>
+                  </div>
+                  <h2 class="title2" align="center">6款课程体系，总有一款适合你</h2>
+                  <h4 class="subtitle" align="center">
+                      <span>
+                          优质教育行业背景，专业研发团队，
+                          针对不同学习需求，打造全面完善的课程体系
+                      </span>
+                  </h4>
+                </div>
+            </div>
+   	    </div>
+   	    <!--学习流程-->
+        <div class="learning-process">
+            <div class="container">
+                <div class="boxContain">
+                            <div id='box_1'>
+                                <img class="img-responsive" src="imageBox/learning_process01.png" alt="">
+                                <p>会员注册 / 登录</p>
+                            </div>
+                            <div  id='box_2'>
+                                <img class="img-responsive" src="imageBox/learning_process02.png" alt="">
+                                <p>购买相关课程</p>
+                            </div>
+                            <div  id='box_3'>
+                                <img class="img-responsive" src="imageBox/learning_process03.png" alt="">
+                                <p class="intercept">
+                                                                        自选外教/时间
+                                </p>
+                            </div>
+                            <div id='box_4'>
+                                <img class="img-responsive" src="imageBox/learning_process04.png" alt="">
+                                <p>电脑登录上课</p>
+                            </div>
+                </div>
+                <h2 class="title" align="center">学习流程</h2>
+                <h4 class="subtitle" align="center">
+                    <span>仅需4步，轻松开启在线学习之旅</span>
+                </h4>
+            </div>
+        </div>
+   	  </div>
+   	  <!--底部地址-->
+   	  <div class="foot" style="background-color:#323232 ;">
+   	  	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+   		  <p style="color: #C7C7C7;" align="center"><span style="color: #556666;">Copyright@ZhangMiao</span>华北理工大学</p>
+   		  <p style="color:#556666;font: '微软雅黑';" align="center" ;>河北省唐山市曹妃甸区唐山湾生态城华北理工大学新校</p>
+   		  <p style="color:#C7C7C7;" align="center">电话：86-18331590631</p>
+   		  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+   	  </div>
+  </body>
+  <script src="./swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      keyboard: {
+        enabled: true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</html>

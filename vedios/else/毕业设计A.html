@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<htmlDOCTYPE>
+  <head>
+	<meta charset="UTF-8">
+	<title>绿叶之恋</title>
+	<style type="text/css">
+		*{
+			font-family: "微软雅黑"
+			margin: 0px;
+			padding: 0px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+		.top{
+			height: 40px;
+			background-color: #A9A9A9;
+		}
+		.nav{
+			height: 70px;
+			background-color: #444444;
+		}
+		.btn-sign {
+               display: inline-block;
+               border-radius: 4px;
+               background-color: #f4511e;
+               border: 1px solid orangered;
+               color: #FFFFFF;
+               text-align: center;
+               font-size: 10px;
+               padding: 5px;
+               cursor: pointer;
+               margin: 5px;
+        }
+        .btn-sign span {
+           cursor: pointer;
+           display: inline-block;
+           position: relative;
+           transition: 0.5s;
+        }
+        .btn-sign span:after {
+           content: '»';
+           position: absolute;
+           opacity: 0;
+           top: 0;
+           right: -20px;
+           transition: 0.5s;
+        }
+        .btn-sign:hover span {
+           padding-right: 25px;
+        }
+        .btn-sign:hover span:after {
+           opacity: 1;
+           right: 0;
+        }
+        .btn-log {
+           display: inline-block;
+           border-radius: 4px;
+           background-color: white;
+           border: 1px solid darkgrey;
+           color: black;
+           text-align: center;
+           font-size: 10px;
+           padding: 5px;
+           cursor: pointer;
+           margin: 5px;
+        }
+        .btn-log span {
+           cursor: pointer;
+           display: inline-block;
+           position: relative;
+           transition: 0.5s;
+        }
+        .btn-log span:after {
+           content: '»';
+           position: absolute;
+           opacity: 0;
+           top: 0;
+           right: -20px;
+           transition: 0.5s;
+        }
+        .btn-log:hover span {
+           padding-right: 25px;
+        }
+        .btn-log:hover span:after {
+           opacity: 1;
+           right: 0;
+        }
+		ul{
+			text-align: center;
+			color: white;
+			margin: 0px;
+		}
+		li{ 
+			font-size: 15px;
+			list-style: none;
+			float: left;
+			margin-left: 1px;
+			margin-right: 1px;
+			line-height: 70px;
+			text-align: center;
+			width: 120px;
+		}
+		li:hover{
+			cursor: pointer;
+			text-decoration: underline;
+			background-color: rgba(200,200,200,0.3);
+			border-radius: 0px;
+		}
+		#li-img{
+			background: url('imageBox/绿叶.png') no-repeat left center;
+			background-size: 40%;
+			padding-left: 40px;
+			font-size: 37px;
+			font-weight: bold;
+		}	
+		#li-img:hover{
+			cursor: default;
+			text-decoration: n;
+			background-color: #444444;
+			border-radius: 0px;
+			text-decoration: none;
+		}
+		.nav-li{
+			margin: 0 auto;
+			width: 1366px;
+		}
+		.main{
+			width:100%;
+			margin: 0 auto;
+			background-color: #E4E4E4;
+		}
+		.banner{
+			margin: 0 auto;
+			border: none;
+			width: 1109px;
+			height: 610px;
+			position: relative;
+			overflow: hidden;
+		}
+		.barner a{
+			z-index: auto;
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 100%;
+			top: 0;
+		}
+		.banner .first{
+			left: 0;
+		}
+		.barner a img{
+			width: 100%;
+			height: 100%;
+		}
+		.banner .pre,.next{
+			cursor: pointer;
+			text-align: center;
+			border-radius: 2px;
+			display: block;
+			width: 40px;
+			height: 60px;
+			background: #CCCCCC;
+			opacity: 0.4;
+			text-decoration: none;
+			z-index: 200;
+			font-size: 40px;
+			color:black;
+			position: absolute;
+			top: 275px;
+		}
+		.banner .pre{
+			left: 0px;
+		}
+		.banner .next{
+			right: 0px;
+		}
+		.choose{
+			z-index: 1000;
+			position: absolute;
+			top: 590px;
+			left: 530px;
+			width: 150px;
+			height: 10px;
+		}
+		.choose span{
+			margin-right: 15px;
+			float: left;
+			display: block;
+			background: gray;
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+		}
+		.choose span:hover{
+			background: limegreen;
+		}
+		.learning-time {
+      padding-top: 75px;
+    }
+    .learning-time .time-trend {
+      padding-top: 35px;
+      padding-bottom: 35px;
+      padding-left: 50px;
+      padding-right: 50px;
+      color: #fff;
+      text-align: center;
+      background-color: #00a080;
+      position: relative;
+      z-index: 99;
+    }
+    .learning-time .time-trend h4 {
+      color: #f3f3f3;
+      margin-bottom: -20px;
+    }  
+    .learning-time .time-trend .img-responsive {
+      display: inline-block;
+    }
+    .title{
+    	font-size: 40px;
+    	color: #1DAB8E;
+    }
+    .learning-crowd {
+      padding-top: 225px;
+      padding-bottom: 50px;
+      background-image: url("../img/learning_crowd_bg.jpg");
+      margin-top: -150px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .learning-crowd .title1 {
+      max-width: 655px;
+      margin: 0 auto 30px auto;
+      color: #fff;
+      line-height: 30px;
+    }
+    .learning-crowd .title1 span {
+      color: #ffd300;
+    }
+    .learning-crowd .crowd-item {
+      margin-bottom: 35px;
+      line-height: 25px;
+      color: #f3f3f3;
+      text-align: center;
+      margin: 0 auto;
+      flex-direction: row;
+      float: left;
+    }
+    .learning-crowd .crowd-item h3 {
+      margin-bottom: 15px;
+      color: #00a080;
+    }  
+    .learning-crowd{
+    	background:#45413E;
+    }
+    </style>
+  </head>
+  <body>
+	  <div class="main">
+		  <!--顶栏-->
+		  <div class="top">
+			  <div align="right">
+		        <button type="button" class="btn-sign" onclick="myClick()<!--location.href='http://baidu.com'-->" style="vertical-align:middle"><span>免费注册</span></button>
+		        <button type="button" class="btn-log" onclick="myClick()" style="vertical-align:middle"><span>马上登录</span></button>
+		    </div>
+	    </div>
+	    <!--顶栏-->
+	    <!--导航栏-->
+		  <div class="nav">
+			  <div class="nav-li">
+				  <ul>
+					  <li id = 'li-img'>青叶</li>
+					  <li><a href="">首页</a></li>
+					  <li>考研</li>
+					  <li>雅思</li>
+					  <li>托福</li>
+					  <li>四六级</li>
+					  <li>行业英语</li>
+					  <li>通用英语</li>
+					  <li>免费课程</li>
+					  <li>在线购买</li>
+				  </ul>
+			  </div>		
+		  </div>
+		  <!--导航栏-->
+		  <div class="main-content">
+        <!--焦点图-->
+   	    <div class="banner">
+   	    	<span class="pre">«</span>
+   	    	<span class="next">»</span>
+   		    <div id="jfocuspic">
+   		    	<a href="#" class="first">
+   		    		<img src="imageBox/夜空01.jpg" />
+   		    	</a>
+   		    	<a href="#">
+   		    		<img src="imageBox/外教01.jpg" />
+   		    	</a>
+   		    	<a href="#">
+   		    		<img src="imageBox/外教04.jpg" />
+   		    	</a>
+   		    	<a href="#">
+   		    		<img src="imageBox/外教05.jpg" />
+   		    	</a>
+   		    	<a href="#">
+   		    		<img src="imageBox/外教06.jpg" />
+   		    	</a>
+   		    </div>
+   		    <div class="choose">
+   		    	<span class="red"></span>
+   		    	<span></span>
+   		    	<span></span>
+   		    	<span></span>
+   		    	<span></span>
+   		    </div>
+   	    </div>
+   	    <!--焦点图-->
+   	    <!--正文-->
+   	    <div class="mainContent">
+   		      <div class="learning-time wow bounceInUp" data-wow-duration="2s">
+              <div class="container">
+                  <h2 class="title" align="center">真的没有时间学习英语吗?</h2>
+                  <div class="time-trend">
+                      <h4>2017年在线学习人群的学习时段数据分布</h4>
+                      <img class="img-responsive" src="imageBox/trend.png" alt="" />
+                  </div>
+              </div>
+              <div class="learning-crowd">
+                  <div class="container">
+                    <h4 class="title1">
+            	          <span>30%</span>的人群在<span>早8点前</span>和<span>晚22点后</span>进行在线学习，每天至少可多得<span>5小时</span>学习时间；
+            	                    线下培训班，往返路程平均浪费<span>1.5小时</span>，在线学习帮你节省时间用来享受生活。
+        	          </h4>
+                    <div class="text-center" align="center">
+                         <img src="imageBox/block-split.png" alt="" />
+                    </div>
+                    <div class="row wow bounceIn" data-wow-duration="2s" align="center">
+                        <div class="crowd-item col-md-3 col-sm-6 wow bounceInRight">
+                            <img src="imageBox/zqz.png" alt="" />
+                            <h4>我是</h4>
+                            <h3>早起族</h3>
+                            <p style="font-size: 12px;">早7点别人还在睡觉，而我在跟英国外教网聊下午茶</p>
+                        </div>
+                        <div class="crowd-item col-md-3 col-sm-6  wow bounceInRight" data-wow-delay="0.3s">
+                            <img src="imageBox/ymz.png" alt="" />
+                            <h4>我是</h4>
+                            <h3>夜猫子</h3>
+                            <p style="font-size: 12px;">夜深人静时，我的注意力最专注，此时不学更待何时</p>
+                        </div>
+                        <div class="crowd-item col-md-3 col-sm-6  wow bounceInRight" data-wow-delay="0.5s">
+                             <img src="imageBox/znzn.png" alt="" />
+                             <h4>我是</h4>
+                             <h3>宅男/女</h3>
+                             <p style="font-size: 12px;">不出门也可以跟老师嗨聊，全世界的新鲜事照样全知道</p>
+                        </div>
+                        <div class="crowd-item col-md-3 col-sm-6  wow bounceInRight" data-wow-delay="0.7s">
+                             <img src="imageBox/lhz.png" alt="" />
+                             <h4>我是</h4>
+                             <h3>乐活族</h3>
+                             <p style="font-size: 12px;">你还在去上课的路上，我已经躺在沙发上学完在看电影</p>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+   	    </div>
+   	    <!--正文-->
+   	  </div>
+   	  <!--底部地址-->
+   	  <div class="foot">
+   		
+   	  </div>
+   	  <!--底部地址-->
+	  </div>
+  </body>
+</html>

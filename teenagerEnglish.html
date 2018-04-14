@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>青叶线上英语-少年英语</title>
+	<style type="text/css">
+	.top{
+	  height: 40px;
+	  background-color: #A9A9A9;
+	}
+	.nav{
+	  height: 70px;
+	  background-color: #444444;
+	}
+	.btn-sign {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: 1px solid orangered;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-sign span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+           transition: 0.5s;
+    }
+    .btn-sign span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .btn-sign:hover span {
+      padding-right: 25px;
+    }
+    .btn-sign:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .btn-log {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: white;
+      border: 1px solid darkgrey;
+      color: black;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-log span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    .btn-log span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .btn-log:hover span {
+      padding-right: 25px;
+    }
+    .btn-log:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    ul{
+		text-align: center;
+		color: white;
+		margin: 0px;
+	}
+	li{ 
+		font-size: 15px;
+		list-style: none;
+		float: left;
+		margin-left: 1px;
+		margin-right: 1px;
+		line-height: 70px;
+		text-align: center;
+		width: 120px;
+	}
+	li:hover{
+		cursor: pointer;
+		text-decoration: underline;
+		background-color: rgba(200,200,200,0.3);
+		border-radius: 0px;
+	}
+	.nav-li a:link{
+		color: white;
+	}
+	.nav-li a:visited{
+		color: white;
+		}
+	#li-img{
+		background: url('imageBox/绿叶.png') no-repeat left center;
+		background-size: 40%;
+		padding-left: 40px;
+		font-size: 37px;
+		font-weight: bold;
+	}	
+	#li-img:hover{
+		cursor: default;
+		text-decoration: n;
+		background-color: #444444;
+		border-radius: 0px;
+		text-decoration: none;
+	}
+	.nav-li{
+		margin: 0 auto;
+		width: 1366px;
+	}
+	.main{
+		width:100%;
+		margin: 0 auto;
+		background-color: #E4E4E4;
+	}
+	.foot{
+   	background-color:#323232 ;
+   }
+	</style>
+	<style type="text/css">
+		html, body {
+        position: relative;
+        height: 100%;
+    }
+    body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 620px;
+    }
+    .swiper-wrapper{
+    	width: 100%;
+    	height: 620px;
+    }
+    .learning-online{
+      padding: 75px 0 100px 0;
+      line-height: 25px;
+    }
+    .learning-online .row{
+      margin-top: 40px;
+    } 
+    .learning-online .img-responsive{
+      display: inline-block;
+      margin-bottom: 10px;
+      margin-top: 40px;
+      float: left;
+      margin-left: 250px;
+    }
+    .learning-online  p{
+      height: 75px;
+      max-width: 250px;
+      margin: 0 auto 20px;
+      overflow: hidden;
+    }
+    .learning-online .row{
+    	width: 100%;
+    	height: 300px;
+    	margin-top: 70px;
+    }
+    .learning-online .row h4{
+    	font-size: 17px;
+    	font-family: "微软雅黑";
+    	color: #323232;
+    }
+    .title{
+    	color: #00A080;
+    	margin-top:0px;
+    	font-size: 40px;
+    }
+    .subtitle {
+      color: #FFD300;
+      font-size: 20px;
+    }
+    .subtitle :hover{
+      color: #666;
+    }
+    .minor-course{
+    padding-bottom: 100px;
+    }
+    .minor-course .row{
+      margin-top: 80px;
+      height: 450px;
+    }
+    .minor-course .img-responsive1{
+      display: inline-block;
+      width: 360px;
+      margin-bottom: 10px;
+      margin-top: 35px;
+      border-bottom: solid 5px #f6f792;
+      float: left;
+      margin-left: 100px;
+    }
+    .minor-course .img-responsive2,.img-responsive3{
+      display: inline-block;
+      width: 360px;
+      margin-bottom: 10px;
+      margin-top: 35px;
+      border-bottom: solid 5px #f6f792;
+      float: left;
+      margin-left: 30px;
+    }
+    .minor-course p {
+      line-height: 30px;
+    }
+    .textContent{
+    	width: 100%;
+    }
+    .textContent-1{
+      display: inline-block;
+      width: 360px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-bottom: solid 5px #f6f792;
+      float: left;
+      margin-left: 100px;
+    }
+    .textContent-2,.textContent-3{
+      display: inline-block;
+      width: 360px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-bottom: solid 5px #f6f792;
+      float: left;
+      margin-left: 30px;
+    }
+    .product-item1{
+   	background-color: white;
+   	height: 260px;
+   	border-radius: 20px;
+   	width: 360px;
+   	float: left;
+   	margin-left:105px;
+   }
+   .product-item2,.product-item3{
+   	background-color: white;
+   	height: 260px;
+   	width: 360px;
+   	border-radius: 20px;
+   	float: left;
+   	margin-left:32px;
+   }
+   .media{
+   	width: 100%;
+   	height: 53%;
+   }
+   .media-left{
+   	float: left;
+   }
+   .media-body{
+   	float:left;
+   	margin-left: 30px;
+   }
+   .media-objec{
+   	margin-left: 10px;
+   	margin-top: 14px;
+   	border-radius: 10px;
+   }
+   .col-xs-4 .btn{
+    float: right;
+   	position: relative;
+   	border-radius: 10px;
+    background-color:whitesmoke;
+    border: none;
+    color: black;
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+   }
+   .col-xs-4 .btn:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+   }
+    .col-xs-4 .btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+   }
+   .self-help-buy{
+   	margin-top: 80px;
+   }
+	</style>
+  </head>
+  <body>
+	<div class="main">
+		  <!--顶栏-->
+		  <div class="top">
+			  <div align="right">
+		        <button type="button" class="btn-sign" onclick="myClick()<!--location.href='http://baidu.com'-->" style="vertical-align:middle"><span>免费注册</span></button>
+		        <button type="button" class="btn-log" onclick="myClick()" style="vertical-align:middle"><span>马上登录</span></button>
+		    </div>
+	    </div>
+	    <!--导航栏-->
+		  <div class="nav">
+			  <div class="nav-li">
+				  <ul>
+					  <li id = 'li-img'>青叶</li>
+					  <li><a href="index.html">首页</a></li>					
+					  <li><a href="graduationEnglish.html">考研</a></li>
+					  <li><a>雅思</a></li>
+					  <li><a>托福</a></li>
+					  <li><a>四六级</a></li>
+				    <li><a href="teenagerEnglish.html">少年英语</a></li>
+					  <li><a href="generalEnglish.html">通用英语</a></li>
+					  <li><a>免费课程</a></li>
+					  <li><a>在线购买</a></li>
+				  </ul>
+			  </div>		
+		  </div>
+		   <!-- 正文-->
+			<div class="main-content">
+		        <div class="swiper-container">
+                        <img class="swiper-wrapper" style="background-image:url(imageTeenager/teenager_banner.jpg)"/>
+                </div>
+		        <div class="mainContent">
+          	        <div class="boxContain">
+          	        	<div class="learning-online">
+                            <div class="container">
+                                <h2 class="title" align="center">在线学习新体验，家长省心，孩子开心</h2>
+                                <h4 class="subtitle" align="center">
+                                   <span>足不出户，欧美外教到你家，给孩子一个自由快乐的学习方式</span>
+                                </h4>
+                                <div class="row text-center" style="background-color: white;">
+                                    <div class="col-md-4 col-sm-6">
+                                        <img class="img-responsive" src="imageTeenager/learning_online01.png" alt=""/>
+                                        <h4>不用接送在家就能学</h4>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <img class="img-responsive" src="imageTeenager/learning_online02.png" alt=""/>
+                                        <h4>欧美外教一对一</h4>
+                                    </div>
+                                    <div class="col-md-4 col-sm-6">
+                                        <img class="img-responsive" src="imageTeenager/learning_online03.png" alt=""/>
+                                        <h4>专业少年英语教材</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="minor-course">
+                            <div class="container">
+                                <h2 class="title" align="center">辅修课程，夯实基础，快速进阶</h2>
+                                <h4 class="subtitle" align="center">
+                                    <span>根据每个孩子的不同情况，可自由选择多种配套课程</span>
+                                </h4>
+                                <div class="row text-center" style="background-color: white;">
+                                    <div class="col-sm-4 col-sm-6">
+                                        <div class="">
+                                            <img  class="img-responsive1" src="imageTeenager/micro_film01.jpg" alt=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-6">
+                                        <div class="">
+                                            <img class="img-responsive2" src="imageTeenager/micro_film02.jpg" alt=""/>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 col-sm-6">
+                                        <div class="">
+                                            <img  class="img-responsive3" src="imageTeenager/micro_film03.jpg" alt=""/>
+                                        </div>
+                                    </div>
+                                    <div class="textContent">
+                                    	<div class="textContent-1" align="center">
+                                    		<h4>自然拼读法</h4>
+                                            <p>掌握发音技巧、单词规律，打好英语学习基础</p>
+                                    	</div>
+                                    	<div class="textContent-2" align="center">
+                                    		<h4>绘本讲堂课</h4>
+                                            <p>趣味教材，提升学习兴趣，扩充知识面，拓展视野</p>
+                                    	</div>
+                                    	<div class="textContent-3" align="center">
+                                    		<h4>火箭进阶课</h4>
+                                            <p>快速提升口语能力，有效增加学习信息</p>
+                                    	</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <h2 class="title" align="center">一键下单 自助购买</h2>
+                            <h4 class="subtitle" align="center">
+                                 <span>三种类型，按需购买，自由组合性价比高</span>
+                            </h4>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <!--S= 自助购买-->
+                <div class="self-help-buy" style="background-color: white;">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                        <div class="product-item1">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy02.jpg"">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">少年系统班</h4>
+                                                    <h4>
+                                                        <span class="price">¥599</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6233</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div align="center">在线课堂，真人老师实时互动，随时看，随时能学</div>
+                                            <div align="center">青叶老师亲编详细解析带你365天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                            <button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                        <div class="product-item2">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy06.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">少年季度班</h4>
+                                                    <h4>
+                                                        <span class="price">¥299</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6356</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div align="center">纠正发音，开拓视野，优秀教师授课，不满意随时换</div>
+                                            <div align="center">青叶老师亲编详细解析带你90天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                        	<button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                        <div class="product-item3">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy08.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">少年暑期班</h4>
+                                                    <h4>
+                                                        <span class="price">¥99</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6250</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div align="center">口语能力+英语思维+应用能力，听说读写全面提升</div>
+                                            <div align="center">青叶老师亲编详细解析带你30天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                        	<button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            <h2 class="title" align="center">一起学英语，一起找funny！</h2>
+                            <h4 class="subtitle" align="center">
+                                 <span>喜欢就买吧！</span>
+                            </h4>
+          	    </div>
+          	        </div>
+                </div> <!----------------mainContent-->
+		    </div> <!-----------main-content-->
+    </div><!----------main-->
+		<!--底部地址-->
+   	<div class="foot">
+   	  	  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+   		  <p style="color: #C7C7C7;" align="center"><span style="color: #556666;">Copyright@ZhangMiao</span>华北理工大学</p>
+   		  <p style="color:#556666;font: '微软雅黑';" align="center" ;>河北省唐山市曹妃甸区唐山湾生态城华北理工大学新校</p>
+   		  <p style="color:#C7C7C7;" align="center">电话：86-18331590631</p>
+   		  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+   	</div>
+   	<!--<script src="teenager.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
+    });
+    </script>-->
+  </body>
+</html>

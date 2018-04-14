@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<title>青叶线上英语学-考研英语</title>
+	<style type="text/css">
+	top{
+	  height: 40px;
+	  background-color: #A9A9A9;
+	}
+	.nav{
+	  height: 70px;
+	  background-color: #444444;
+	}
+	.btn-sign {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: #f4511e;
+      border: 1px solid orangered;
+      color: #FFFFFF;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-sign span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+           transition: 0.5s;
+    }
+    .btn-sign span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .btn-sign:hover span {
+      padding-right: 25px;
+    }
+    .btn-sign:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    .btn-log {
+      display: inline-block;
+      border-radius: 4px;
+      background-color: white;
+      border: 1px solid darkgrey;
+      color: black;
+      text-align: center;
+      font-size: 10px;
+      padding: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    .btn-log span {
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+    }
+    .btn-log span:after {
+      content: '»';
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      right: -20px;
+      transition: 0.5s;
+    }
+    .btn-log:hover span {
+      padding-right: 25px;
+    }
+    .btn-log:hover span:after {
+      opacity: 1;
+      right: 0;
+    }
+    ul{
+		text-align: center;
+		color: white;
+		margin: 0px;
+	}
+	li{ 
+		font-size: 15px;
+		list-style: none;
+		float: left;
+		margin-left: 1px;
+		margin-right: 1px;
+		line-height: 70px;
+		text-align: center;
+		width: 120px;
+	}
+	li:hover{
+		cursor: pointer;
+		text-decoration: underline;
+		background-color: rgba(200,200,200,0.3);
+		border-radius: 0px;
+	}
+	.nav-li a:link{
+		color: white;
+	}
+	.nav-li a:visited{
+		color: white;
+		}
+	#li-img{
+		background: url('imageBox/绿叶.png') no-repeat left center;
+		background-size: 40%;
+		padding-left: 40px;
+		font-size: 37px;
+		font-weight: bold;
+	}	
+	#li-img:hover{
+		cursor: default;
+		text-decoration: n;
+		background-color: #444444;
+		border-radius: 0px;
+		text-decoration: none;
+	}
+	.nav-li{
+		margin: 0 auto;
+		width: 1366px;
+	}
+	.main{
+		width:100%;
+		margin: 0 auto;
+		background-color: #E4E4E4;
+	}
+	.foot{
+   	background-color:#323232 ;
+   }
+	</style>
+	<link rel="stylesheet" href="graduation.css">
+	<style type="text/css">
+    body {
+        background: #fff;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width:300px;
+        height: 300px;
+    }
+    .swiper-pagination{
+    	background-color: #E4E4E4;
+    }
+    .self-help-buy{
+    padding-bottom: 100px;
+}
+    .self-help-buy .product-item {
+      position: relative;
+      padding: 10px;
+      margin-bottom: 30px;
+      line-height: 25px;
+      border: solid 1px #ddd;
+    }
+    .self-help-buy .product-item .media{
+      margin-top: 0;
+    }
+    .self-help-buy .product-item .price {
+      color: #d95072;
+    } 
+    .self-help-buy .product-item .buttons {
+      margin-top: 5px;
+    }
+    .self-help-buy  .product-item .buttons div.row {
+      margin: 0 -5px;
+    }
+    .self-help-buy  .product-item .buttons div.row>div {
+      padding: 5px;
+      margin: 0;
+    }
+    .mainContent{
+   	width: 100%;
+   	height:1000px;
+   }
+   .title{
+   	font-size: 40px;
+   	color: white;
+   }
+   .subtitle{
+   	font-size: 20px;
+   	color: #FFD300;
+   }
+   .product-item1{
+   	background-color: white;
+   	height: 260px;
+   	border-radius: 20px;
+   	width: 360px;
+   	float: left;
+   	margin-left:105px;
+   }
+   .product-item2,.product-item3{
+   	background-color: white;
+   	height: 260px;
+   	width: 360px;
+   	border-radius: 20px;
+   	float: left;
+   	margin-left:32px;
+   }
+   .media{
+   	width: 100%;
+   	height: 53%;
+   }
+   .media-left{
+   	float: left;
+   }
+   .media-body{
+   	float:left;
+   	margin-left: 30px;
+   }
+   .media-objec{
+   	margin-left: 10px;
+   	margin-top: 14px;
+   	border-radius: 10px;
+   }
+   .col-xs-4 .btn{
+    float: right;
+   	position: relative;
+   	border-radius: 10px;
+    background-color:whitesmoke;
+    border: none;
+    color: black;
+    padding: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+   }
+   .col-xs-4 .btn:after {
+    content: "";
+    background: #90EE90;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+   }
+    .col-xs-4 .btn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+   }
+   .graduation12-1,.graduation12-2{
+   	float: left;
+   }
+   .graduation1img{
+   	float: left;
+   	margin-left: 100px;
+   	margin-top: 30px;
+   }
+   .graduation2img{
+   	float: left;
+   	margin-left: 200px;
+   }
+   .graduation2img{
+   	float: right;
+   	margin-right: 100px;
+   }
+   .graduation1-content{
+   	color:darkslategray ;
+   }
+   .graduation2-content{
+   	margin-right:100px ;
+   	float: right;
+   	color:darkslategray ;
+   }
+	</style>
+   </head>
+  <body>
+  	<div class="main">
+  		  <!--顶栏-->
+		  <div class="top">
+			  <div align="right">
+		        <button type="button" class="btn-sign" onclick="myClick()<!--location.href='http://baidu.com'-->" style="vertical-align:middle"><span>免费注册</span></button>
+		        <button type="button" class="btn-log" onclick="myClick()" style="vertical-align:middle"><span>马上登录</span></button>
+		    </div>
+	    </div>
+	    <!--导航栏-->
+		  <div class="nav">
+			  <div class="nav-li">
+				  <ul>
+					  <li id = 'li-img'>青叶</li>
+					  <li><a href="index.html">首页</a></li>					
+					  <li><a href="graduationEnglish.html">考研</a></li>
+					  <li><a>雅思</a></li>
+					  <li><a>托福</a></li>
+					  <li><a>四六级</a></li>
+				    <li><a href="teenagerEnglish.html">少年英语</a></li>
+					  <li><a href="generalEnglish.html">通用英语</a></li>
+					  <li><a>免费课程</a></li>
+					  <li><a>在线购买</a></li>
+				  </ul>
+			  </div>		
+		  </div>
+		  <div class="main-content">
+		      <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/001.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/002.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/004.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/003.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/006.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/007.jpg)"></div>
+                    <div class="swiper-slide" style="background-image:url(imageGraduation/005.jpg)"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="mainContent" style="background-image: url(imageGeneral/learning_crowd_bg.jpg);">
+          	        <div class="boxContain">
+          	        	<div class="graduation12" style="background-color: white;width: 100%;height: 300px;">
+          	        	  <div class="graduation12-1" style="width: 100%;">
+          	        		<div class="graduation1img">
+          	        			<img src="imageGraduation/self-help-buy04.jpg" />
+          	        		</div>
+          	        		<div>&nbsp;</div>
+          	        		<div>&nbsp;</div>
+          	        		<div class="graduation1-content">
+          	        			&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;英语一:考研英语实力老师，实践教学经验丰富
+          	        			覆盖基础、强化、冲刺阶段
+          	        			一直陪伴你 知道考前
+          	        			5000词汇量带你过过过！</br>
+          	        			&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;致 明知前路艰辛却从未停步的你，</br>
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;无数个咬牙坚持早起的清晨，穿过初雪的冬日，踏着地平线泛起的亮光开始新的一天</br>
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;图书馆的自习室里吹响了前进的号角，堆叠的复习资料，补充能量的小食品，梦想从未睡着 青春正积蓄能量。</br>
+                                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;研路漫漫,祝每份努力都不被辜负,但你必须非常努力，才能看起来毫不费力...........
+          	        		</div>
+          	        	  </div>
+          	        	  <div class="graduation12-2" style="width: 100%;">
+          	        	  	<div>&nbsp;</div>
+          	        		<div>&nbsp;</div>
+          	        		<div class="graduation2-content">
+          	        			英语二:考研英语实力老师，实践教学经验丰富
+          	        			覆盖基础、强化、冲刺阶段
+          	        			一直陪伴你 知道考前
+          	        			3000词汇量保你高分过！</br>
+          	        			致 每天泡在图书馆自习室却从不抱怨的你，<br/>
+          	        			数不清楚的便签纸，记录了生活中的点点滴滴<br/>
+                                                                单词、知识点、复习计划和小心情，自习室星星点点的灯光，一笔一划刻下的都是奋斗的印记，<br/>
+                                                                窗外秋风瑟瑟，可自习室依旧灯火通明，通往梦想的路上不分寒暑。梦想在眼前，路还在脚下............
+          	        		</div>
+          	        		<div class="graduation2img">
+          	        			<img src="imageGraduation/self-help-buy05.jpg" />
+          	        		</div>
+          	        	  </div>
+          	        	</div>
+          	        	<!--S= 自助购买-->
+                        <div class="self-help-buy">
+                            <div class="container">
+                        	    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <h2 class="title" align="center">一键下单 自助购买</h2>
+                                <h4 class="subtitle" align="center">
+                                 <span>三种类型，按需购买，自由组合性价比高</span>
+                                </h4>
+                                <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-item1">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy02.jpg"">
+                                                </div>
+                                                  <div class="media-body">
+                                                    <h4 class="intercept">考研系统班</h4>
+                                                    <h4>
+                                                        <span class="price">¥699</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6776</span>人购买
+                                                    </h5>
+                                                  </div>
+                                                </div>
+                                                <div>&nbsp;</div>
+                                                <div align="center">单词书+真题详解+全套讲义，学长学姐推荐</div>
+                                                <div align="center">青叶老师亲编详细解析带你365天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                            <button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-item2">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy06.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">考研季度班</h4>
+                                                    <h4>
+                                                        <span class="price">¥399</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6056</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div align="center">单词书+真题详解+全套讲义，学长学姐推荐</div>
+                                            <div align="center">青叶老师亲编详细解析带你90天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                        	<button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="product-item3">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img class="media-objec" src="imageGeneral/self-help-buy08.jpg" alt="">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="intercept">考研暑期班</h4>
+                                                    <h4>
+                                                        <span class="price">¥199</span>
+                                                    </h4>
+                                                    <h5 class="text-muted">
+                                                        <span class="text-danger">6956</span>人购买
+                                                    </h5>
+                                                </div>
+                                            </div>
+                                            <div>&nbsp;</div>
+                                            <div align="center">单词书+真题详解+全套讲义，学长学姐推荐</div>
+                                            <div align="center">青叶老师亲编详细解析带你30天的实战练习</div>
+                                                <div class="buttons">
+                                                    <div class="row">
+                                                        <div class="col-xs-4">
+                                                        	<button class="btn">立即购买➠</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                                    <h2 class="title" align="center">一起学英语，一起找funny！</h2>
+                                    <h4 class="subtitle" align="center">
+                                        <span>喜欢就买吧！</span>
+                                    </h4>
+          	                    </div>
+          	                </div>
+          	        	</div>
+          	        </div><!---------------boxContain-->
+          	  </div> <!-------------mainContain-->
+          </div><!------------main-content-->
+  	</div><!-- -----main-->
+  	<!--底部地址-->
+   	<div class="foot">
+   	  	  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+   		  <p style="color: #C7C7C7;" align="center"><span style="color: #556666;">Copyright@ZhangMiao</span>华北理工大学</p>
+   		  <p style="color:#556666;font: '微软雅黑';" align="center" ;>河北省唐山市曹妃甸区唐山湾生态城华北理工大学新校</p>
+   		  <p style="color:#C7C7C7;" align="center">电话：86-18331590631</p>
+   		  <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+   	</div>
+   	<script src="graduation.js"></script>
+    <script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+    </script>
+  </body>
+</html>

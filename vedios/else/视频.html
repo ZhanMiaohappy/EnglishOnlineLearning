@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>添加视频</title>
+		<style>
+			.button1{
+				background-color: #4CAF50; 
+                border: none;
+                color: white;
+                padding: 15px 32px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.4s;
+			}
+		</style>
+	</head>
+	<body>
+		<video id="vedio1" width="200" height="360" controls>
+			<source src="vedios/视频.mp4" type="video/mp4">
+		</video>
+		<div>
+			<button class="button1" onclick="playPause()">播放/暂停</button>
+		</div>
+		<script> 
+             var myVideo=document.getElementById("vedio1"); 
+             function playPause()
+               { 
+	             if (myVideo.paused) 
+	             myVideo.play(); 
+	             else 
+	             myVideo.pause(); 
+               } 
+        </script> 
+	</body>
+</html>
